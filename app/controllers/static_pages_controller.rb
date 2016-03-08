@@ -1,7 +1,14 @@
+require 'test_helper'
+
 class StaticPagesController < ApplicationController
-  def home
+  test "should get home" do
+    get :home
+    assert_response :success
   end
 
-  def help
+test "should get help" do 
+  get :help
+  assert_response :success
   end
+  
 end
